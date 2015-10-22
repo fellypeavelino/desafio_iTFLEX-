@@ -88,6 +88,7 @@
 										success:function(data){
 											$("#formulario").html(data);
 											$("#task").val(obj.task);
+											$("#id").val(obj.id);
 											if(obj.done == 1){
 												$("#done").prop("checked", true);
 											}

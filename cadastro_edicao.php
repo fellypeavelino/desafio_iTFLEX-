@@ -36,7 +36,16 @@
 					});
 				});
 				$('#btn-edit').click(function(){
-					
+					var url = window.location.href;
+					var string = '"id":'+$('#id').val()+',"task":"'+$('#task').val()+'","done":'+($('#done').is(":checked") != "true" ? false : true);
+					$.ajax({
+						url : 'webservice_rest.php',
+						type : 'PUT',
+						data : {data : btoa(string)},
+						success : function(){
+							window.location.href = url;
+						}
+					});					
 				});
 			});
 		</script>

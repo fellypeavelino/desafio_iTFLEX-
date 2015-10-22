@@ -67,14 +67,14 @@
 								"opacity":"0.5",
 								"background-color":"gray"
 							});
-							$("#formulario").css({
+							$("#formulario").animate({
 								"width":(width/2)+"px",
 								"left":(width/4)+"px",
 								"height":(height/1.8)+"px",
 								"top":"0px",
 								"background-color":"white",
 								"border-radius":"15px"
-							});
+							},"slow");
 							$.ajax({
 								url:"webservice_rest.php",
 								type:"GET",
@@ -121,14 +121,14 @@
 								"opacity":"0.5",
 								"background-color":"gray"
 							});
-							$("#formulario").css({
+							$("#formulario").animate({
 								"width":(width/2)+"px",
 								"left":(width/4)+"px",
 								"height":(height/1.8)+"px",
 								"top":"0px",
 								"background-color":"white",
 								"border-radius":"15px"
-							});
+							},"slow");
 							$.ajax({
 								url:"cadastro_edicao.php?fl=1",
 								type:"GET",
@@ -180,7 +180,7 @@
 		</div>
 		<div id="spoolk" style="position:absolute;">
 		</div>
-		<div id="formulario" style="position:absolute;z-index:2;">
+		<div id="formulario" style="position:absolute;z-index:2;background-color:white;">
 		</div>
     </body>
 </html>

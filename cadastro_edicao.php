@@ -51,6 +51,9 @@
 			});
 		</script>
 		<style>
+			body{
+				background-color:white;
+			}
 			#login {
 				padding-top: 50px
 			}

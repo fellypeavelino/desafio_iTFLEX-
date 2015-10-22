@@ -24,7 +24,7 @@
 				});	
 				$('#btn-login').click(function(){
 					var url = window.location.href;
-					var string = '"task":"'+$('#task').val()+'","done":'+($('#done').val() != "true" ? false : true);
+					var string = '"task":"'+$('#task').val()+'","done":'+($('#done').is(":checked") != "true" ? false : true);
 					//console.log(btoa(string));
 					$.ajax({
 						url : 'webservice_rest.php',

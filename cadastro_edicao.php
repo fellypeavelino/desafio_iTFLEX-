@@ -24,8 +24,8 @@
 				});	
 				$('#btn-login').click(function(){
 					var url = window.location.href;
-					var string = '"task":"'+$('#task').val()+'","done":'+($('#done').is(":checked") != "true" ? false : true);
-					//console.log(btoa(string));
+					var string = '"task":"'+$('#task').val()+'","done":'+$('#done').is(":checked");
+					//console.log(string);
 					$.ajax({
 						url : 'webservice_rest.php',
 						type : 'POST',
@@ -37,7 +37,8 @@
 				});
 				$('#btn-edit').click(function(){
 					var url = window.location.href;
-					var string = '"id":'+$('#id').val()+',"task":"'+$('#task').val()+'","done":'+($('#done').is(":checked") != "true" ? false : true);
+					var string = '"id":'+$('#id').val()+',"task":"'+$('#task').val()+'","done":'+$('#done').is(":checked");
+					//console.log(string);
 					$.ajax({
 						url : 'webservice_rest.php',
 						type : 'PUT',

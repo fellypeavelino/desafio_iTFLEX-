@@ -6,6 +6,7 @@ $banco = new conect();
 if($metodoHTTP == 'POST'){
 	$param = "{".base64_decode($_POST['data'])."}";
 	$json = (json_decode($param));
+	var_dump($json);
 	$banco->insert($json);
 }
 
